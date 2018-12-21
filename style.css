@@ -1,0 +1,401 @@
+/*==============================
+  GENERAL STYLES
+================================*/
+
+/*https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/*/
+*, html {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 1.5em Helvetica, Arial;
+  height: 100%;
+  padding-bottom: 2.3em;
+  overflow:auto;
+}
+
+
+
+/*==============================
+  #MESSAGE-INPUT-FORM
+================================*/
+form {
+  background: #2c3e50;
+  height: 2.3em;
+  width: 100%;
+  display: flex;
+  padding: 3px;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+}
+
+  form input {
+    border: 0;
+    font-size: 1em;
+    /*height: 2px;*/
+    height: 2em;
+    min-width: 70%;
+    flex: 1;
+    padding:0.5em;
+    margin-right: .5%;
+  }
+
+  form button {
+    background: #27ae60;
+    border: none;
+    color: white;
+    font-size: 1em;
+    height: 2em;
+    padding: 10px;
+  }
+
+/*==============================
+  #JOINING-CHAT-STRAPLINE
+================================*/
+
+#joiners {
+  background-color:#2c3e50;
+  color: white;
+  opacity:0.9;
+  z-index: 3;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.5em;
+  word-wrap: break-word;
+}
+
+#joined  { color: #40d47e; }
+
+
+
+/*==============================
+  #MESSAGES-WINDOW
+================================*/
+#messages {
+  list-style-type: none;
+  margin: 0;
+  max-height: 90%;
+  padding: 0;
+}
+
+  #messages li { padding: 5px 10px; }
+
+    #messages li:nth-child(odd) { background: #eee; }
+
+
+/* == Individual messages == */
+.time { color: #9c9c9c; }
+
+a{
+  cursor: pointer;
+}
+
+.name {
+  color: #2980b9;
+  margin-right: 0.8em;
+  word-wrap: break-word;
+}
+
+.name,
+.time {
+  font-size: 0.7em;
+}
+
+/*==============================
+  MEDIA QUERIES
+================================*/
+
+@media only screen and (min-width: 768px) {
+
+  .name {
+    font-size: 1em;
+  }
+
+  .name,
+  .time {
+    font-size: .8em;
+  }
+
+  #joiners {
+    height: 2em;
+    font-size: 1.5em;
+    padding: 0.5em 0 1em 2em;
+    text-align: left;
+  }
+}
+
+.container{max-width:1170px; margin:auto;}
+img{ max-width:100%;}
+.inbox_people {
+  background: #f8f8f8 none repeat scroll 0 0;
+  float: left;
+  overflow: hidden;
+  width: 40%; border-right:1px solid #c4c4c4;
+}
+.inbox_msg {
+  border: 1px solid #c4c4c4;
+  clear: both;
+  overflow: hidden;
+}
+.top_spac{ margin: 20px 0 0;}
+
+
+.recent_heading {float: left; width:40%;}
+.srch_bar {
+  display: inline-block;
+  text-align: right;
+  width: 60%; 
+}
+
+.headind_srch{ padding:10px 29px 10px 20px; overflow:hidden; border-bottom:1px solid #c4c4c4;}
+
+.recent_heading h4 {
+  color: #05728f;
+  font-size: 21px;
+  margin: auto;
+}
+.srch_bar input{ border:1px solid #cdcdcd; border-width:0 0 1px 0; width:80%; padding:2px 0 4px 6px; background:none;}
+.srch_bar .input-group-addon button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  padding: 0;
+  color: #707070;
+  font-size: 18px;
+}
+.srch_bar .input-group-addon { margin: 0 0 0 -27px;}
+
+.chat_ib h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
+.chat_ib h5 span{ font-size:13px; float:right;}
+.chat_ib p{ font-size:14px; color:#989898; margin:auto}
+.chat_img {
+  float: left;
+  width: 11%;
+}
+.chat_ib {
+  float: left;
+  padding: 0 0 0 15px;
+  width: 88%;
+}
+
+.chat_people{ overflow:hidden; clear:both;}
+.chat_list {
+  border-bottom: 1px solid #c4c4c4;
+  margin: 0;
+  padding: 18px 16px 10px;
+}
+.inbox_chat { height: 550px; overflow-y: scroll;}
+
+.active_chat{ background:#ebebeb;}
+
+.incoming_msg{
+  margin: 15px 0;
+}
+
+.incoming_msg_img {
+  display: inline-block;
+  width: 6%;
+}
+
+.received_msg {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  vertical-align: top;
+  word-break: break-all;
+  width: 80%;
+ }
+ .received_withd_msg p {
+  background: #ebebeb none repeat scroll 0 0;
+  border-radius: 3px;
+  color: #646464;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.time_date {
+  color: #747474;
+  display: block;
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+.received_withd_msg { width: 57%;}
+.mesgs {
+  float: left;
+  padding: 30px 15px 0 25px;
+  width: 60%;
+}
+
+ .sent_msg p {
+  background: #05728f none repeat scroll 0 0;
+  border-radius: 3px;
+  font-size: 14px;
+  margin: 0; color:#fff;
+  padding: 5px 20px 5px 12px;
+  width:100%;
+  word-break: break-all;
+}
+.outgoing_msg{ overflow:hidden; margin:15px 0;}
+.sent_msg {
+  float: right;
+  width: 46%;
+}
+.input_msg_write input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  color: #4c4c4c;
+  font-size: 15px;
+  min-height: 48px;
+  width: 100%;
+}
+
+.type_msg {border-top: 1px solid #c4c4c4;position: relative;}
+.msg_send_btn {
+  background: #05728f none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  height: 33px;
+  position: absolute;
+  right: 0;
+  top: 11px;
+  width: 33px;
+}
+.messaging { padding: 0 0 50px 0;}
+.msg_history {
+  height: 516px;
+  overflow-y: auto;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.checkmark {
+  display:inline-block;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  width: 22px;
+  height:22px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+.checkmark2 {
+  display:inline-block;
+  position: absolute;
+  right: 0px;
+  bottom: -6;
+  width: 22px;
+  height:22px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+.checkmark_circle {
+  position: absolute;
+  width:22px;
+  height:22px;
+  background-color: white;
+  border-radius:11px;
+  left:0;
+  top:0;
+}
+
+.checkmark_circle_unfilled {
+  position: absolute;
+  width:22px;
+  height:22px;
+  background-color: white;
+  border-radius:11px;
+  left:0;
+  top:0;
+}
+
+.checkmark_stem {
+  position: absolute;
+  width:2px;
+  height:14px;
+  background-color:green;
+  left:11px;
+  top:1px;
+}
+
+.checkmark_kick {
+  position: absolute;
+  width:2px;
+  height:3px;
+  background-color:green;
+  left:9px;
+  top:12px;
+}
+
+.checkmark_stem_unfilled {
+  position: absolute;
+  width:2px;
+  height:14px;
+  background-color:grey;
+  left:11px;
+  top:1px;
+}
+
+.checkmark_kick_unfilled {
+  position: absolute;
+  width:2px;
+  height:3px;
+  background-color:grey;
+  left:9px;
+  top:12px;
+}
+.spanDeliveryStatus{
+  padding-left: 100px;
+  color: #747474;
+  display: block;
+  font-size: 12px;
+  margin-top: 8px;
+}
